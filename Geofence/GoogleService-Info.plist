@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>299311574355-ve32q9nsuo3sj0k3h0gjdp90jj7970ie.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.299311574355-ve32q9nsuo3sj0k3h0gjdp90jj7970ie</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCmRGkC7dlsObBWPjftaFbp0K8m5L_WXQM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>299311574355</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.geofence.ios</string>
+	<key>PROJECT_ID</key>
+	<string>geofence-25250</string>
+	<key>STORAGE_BUCKET</key>
+	<string>geofence-25250.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:299311574355:ios:40974ae5dc975682c145a6</string>
+</dict>
+</plist>
