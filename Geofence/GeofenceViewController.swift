@@ -11,7 +11,7 @@ import CoreData
 
 class GeofenceViewController: UIViewController {
 
-    let deviceLocationManager = DeviceLocationManager()
+    let deviceLocationManager = DeviceLocationManager(locationManager: CLLocationManager())
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class GeofenceViewController: UIViewController {
         deviceLocationManager.requestAuthorization()
         if let regions = simulatedRegions() {
             deviceLocationManager.delegate = self
-            deviceLocationManager.geofenceRegions(regions)
+            deviceLocationManager.geofenceRegions(regions, isMonitoringAvailable: CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self))
         }
     }
 

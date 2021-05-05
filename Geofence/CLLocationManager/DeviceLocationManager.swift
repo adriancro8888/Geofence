@@ -9,7 +9,7 @@ public class DeviceLocationManager: NSObject, CLLocationManagerDelegate {
     private var manager: CLLocationManager
     
     /// Delegate of events.
-    public weak var delegate: LocationManagerDelegate?
+    public var delegate: LocationManagerDelegate?
     
     // MARK: - Public Properties
 
@@ -34,8 +34,8 @@ public class DeviceLocationManager: NSObject, CLLocationManagerDelegate {
     
     // MARK: - Initialization
 
-    override init() {
-        self.manager = CLLocationManager()
+    init(locationManager : CLLocationManager) {
+        self.manager = locationManager
         super.init()
         self.manager.delegate = self
     }
@@ -67,9 +67,9 @@ public class DeviceLocationManager: NSObject, CLLocationManagerDelegate {
 
     /// Replace [CLRegion] by GeofencingRequest in the future. Those requests use to call API
     
-    public func geofenceRegions(_ requests: [CLRegion]) {
+    public func geofenceRegions(_ requests: [CLRegion], isMonitoringAvailable : Bool) {
         // If region monitoring is not supported for this device just cancel all monitoring by dispatching `.notSupported`.
-        let isMonitoringSupported = CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self)
+        let isMonitoringSupported = isMonitoringAvailable
         if !isMonitoringSupported {
             delegate?.locationManager(geofenceError: .notSupported, region: nil)
             return
